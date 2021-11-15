@@ -1,12 +1,10 @@
 import './App.css';
-import Login from './components/login';
-import Signup from './components/signup';
+import SignInOutContainer from './components';
 
 function App() {
   return (
     <div className="App">
-          {/*<Login/>*/}
-          <Signup/>
+          <SignInOutContainer/>
     </div>
   );
 }

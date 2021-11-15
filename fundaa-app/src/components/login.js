@@ -6,15 +6,16 @@ import Checkbox from '@material-ui/core/Checkbox'
 
 const Login =()=> {
 
-    const paperstyle = {padding:20 , height: '70vh',width: 280 , margin: "20px auto" }
+    const paperstyle = {padding: 5 , height: '82vh',width: 280 , margin: "10px auto" }
     const avatarstyle = {backgroundColor : '#3f51b5'}
     const gap = {margin: '8px 0'}
+    const gap3 = {margin: '0px 0'}
     return(
         <Grid>
-            <Paper elevation={10} style={paperstyle}>
+            <Paper style={paperstyle}>
                 <Grid align="center">
                     <Avatar style={avatarstyle}><AccountCircleRoundedIcon/></Avatar>
-                    <h2>Sign In</h2>
+                    <h2 style={gap3}>Sign In</h2>
                 </Grid>
                 <TextField label='Username' placeholder='Enter Username' fullWidth required></TextField>
                 <TextField style={gap} label='Password' placeholder='Enter Password' type='password' fullWidth required></TextField>

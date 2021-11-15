@@ -10,19 +10,19 @@ import Checkbox from '@material-ui/core/Checkbox'
 
 const Signup =()=> {
 
-    const paperstyle = {padding:20, width: 280 , margin: "20px auto" }
+    const paperstyle = {padding:5 , height: '82vh', width: 280 , margin: "10px auto" }
     const avatarstyle = {backgroundColor : '#3f51b5'}
     const gap = {margin: '8px 0'}
-
+    const gap2 = {margin: '-16px 0'}
+    const gap3 = {margin: '0px 0'}
     return(
         <Grid>
-            <Paper elevation={10} style={paperstyle}>
+            <Paper style={paperstyle}>
                 <Grid align="center">
                     <Avatar style={avatarstyle}><AccountCircleRoundedIcon/></Avatar>
-                    <h2>Sign Up</h2>
+                    <h2 style={gap3}>Sign Up</h2>          
+                    <Typography variant='caption'>Sign Up and get access to thousands of books!</Typography>
                 </Grid>
-                
-                <Typography variant='caption'>Sign Up and get access to thousands of books!</Typography>
                 <Grid align ="left">
                 <form>
                 <TextField label='Name'  fullWidth required></TextField>
@@ -34,14 +34,14 @@ const Signup =()=> {
                             <FormControlLabel value="male" control={<Radio />} label="Male" />
                     </RadioGroup>
                 </FormControl>
-                <TextField label='Contact' fullWidth required></TextField>
-                <TextField label='Password' type='password' fullWidth required></TextField>
+                <TextField style={gap2} label='Contact' fullWidth required></TextField>
+                <TextField style={gap}label='Password' type='password' fullWidth required></TextField>
                 <TextField label='Confirm Password' type='password' fullWidth required></TextField>
                 <FormControlLabel
                         control={<Checkbox name="checkedA" />}
                         label="I accept terms and conditions"
                 />
-                <Button type="submit" color="primary" variant="contained" fullWidth>Sign up</Button>
+                <Button type="submit" color="primary" variant="contained" fullWidth >Sign up</Button>
                 </form>
                 </Grid>
             </Paper>
