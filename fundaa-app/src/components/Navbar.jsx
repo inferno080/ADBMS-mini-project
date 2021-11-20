@@ -66,7 +66,7 @@ const Navbar = () => {
                 </Left>
                 <Centre>
                     <Logo>
-                        BookStore
+                        BIBLIOTHECA
                     </Logo>
                 </Centre>
                 <Right>
