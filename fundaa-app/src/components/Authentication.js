@@ -4,14 +4,14 @@ import Tab from '@material-ui/core/Tab'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Login from '../components/login'
-import Signup from '../components/signup' 
+import Login from './login'
+import Signup from './signup' 
 
 
 const SignInOutContainer = () => { 
 
     const [value,setValue]=useState(0)
-    const paperStyle={width:340,margin:"20px auto"}
+    const paperStyle={width:340, margin:"20px auto"}
     const handleChange = (event, newValue) => {
         setValue(newValue);
       };
