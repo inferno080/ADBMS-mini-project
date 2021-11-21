@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Announcements from "../components/Announcements";
-import Products from "../components/Products.jsx";
+import Products from "../components/Products";
 import Footer from "../components/Footer";
 
 const Container = styled.div``;
@@ -34,32 +34,22 @@ const Option = styled.option``;
 const ProductList = () => {
   return (
     <Container>
-      <Navbar />
       <Announcements />
-      <Title>Dresses</Title>
+      <Navbar />
+      <Title>Books</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
           <Select>
             <Option disabled selected>
-              Color
+              Genre
             </Option>
-            <Option>White</Option>
-            <Option>Black</Option>
-            <Option>Red</Option>
-            <Option>Blue</Option>
-            <Option>Yellow</Option>
-            <Option>Green</Option>
-          </Select>
-          <Select>
-            <Option disabled selected>
-              Size
-            </Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
+            <Option>Fiction</Option>
+            <Option>Classics</Option>
+            <Option>Self Help</Option>
+            <Option>Spiritual</Option>
+            <Option>Pre-Teen</Option>
+            <Option>Comics</Option>
           </Select>
         </Filter>
         <Filter>
@@ -72,6 +62,7 @@ const ProductList = () => {
         </Filter>
       </FilterContainer>
       <Products />
+      <Footer/>
     </Container>
   );
 };
