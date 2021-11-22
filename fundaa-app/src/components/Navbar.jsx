@@ -2,11 +2,13 @@ import React from 'react'
 import Search from '@material-ui/icons/Search'
 import Badge from '@material-ui/core/Badge'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined'
 
 const Container = styled.div`
     height : 60px;
 `;
+
 const Wrapper = styled.div`
     padding : 10px 20px;
     display : flex;
@@ -65,15 +67,21 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Centre>
+                    <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to = "/">
                     <Logo>
                         BIBLIOTHECA
                     </Logo>
+                    </Link>
                 </Centre>
                 <Right>
+                    <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to = "/authentication">
                     <MenuItem>Sign In / Sign Up</MenuItem>
+                    </Link>
+                    <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to = "/cart">
                     <MenuItem>
                         <Badge badgeContent = {4} color ="primary"><ShoppingCartOutlinedIcon/></Badge>
                     </MenuItem>
+                    </Link>
                 </Right>
             </Wrapper>
         </Container>

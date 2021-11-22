@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
 import Tabs from '@material-ui/core/Tabs'
+import styled from 'styled-components'
 import Tab from '@material-ui/core/Tab'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Login from './login'
-import Signup from './signup' 
+import Login from '../components/login'
+import Signup from '../components/signup' 
+import Announcements from '../components/Announcements';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
+const Container = styled.div`
+    margin-top : 30px;
+    border: 1px solid #000;
+    background-image: url(https://i.ibb.co/BjPTH2L/books3.jpg);
+`
 
 const SignInOutContainer = () => { 
 
@@ -38,6 +47,10 @@ const SignInOutContainer = () => {
     }
 
     return(
+        <div>
+        <Announcements/>
+        <Navbar/>
+        <Container>
         <Paper elevation={20} style={paperStyle}>
         <Tabs
           value={value}
@@ -57,6 +70,9 @@ const SignInOutContainer = () => {
       <Signup/>
       </TabPanel>
       </Paper>
+      </Container>
+      <Footer/>
+      </div>
     )
 }
 

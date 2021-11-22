@@ -1,6 +1,7 @@
 import  KeyboardArrowLeftOutlinedIcon from '@material-ui/icons/KeyboardArrowLeftOutlined'
 import  KeyboardArrowRightOutlinedIcon from '@material-ui/icons/KeyboardArrowRightOutlined'
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { useState } from "react"
 import { sliderItems } from "../data"
 import styled from 'styled-components'
@@ -98,7 +99,9 @@ const Slider = () => {
                     <InfoContainer>
                         <Title>{item.title}</Title>
                         <Desc>{item.desc}</Desc>
+                        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to = "/products">
                         <Button>SHOW NOW</Button>
+                        </Link>
                     </InfoContainer>
                 </Slide>
                 ))}
