@@ -2,6 +2,7 @@ import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Announcements from "../components/Announcements";
 import Footer from "../components/Footer";
+import {Link} from 'react-router-dom'
 import Navbar from "../components/Navbar";
 
 const Container = styled.div``;
@@ -153,7 +154,9 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
+          <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to = "/products">
           <TopButton>CONTINUE SHOPPING</TopButton>
+          </Link>
           <TopTexts>
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Your Wishlist (0)</TopText>
