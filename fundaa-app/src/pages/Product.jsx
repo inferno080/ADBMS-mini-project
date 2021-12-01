@@ -1,5 +1,4 @@
 import { Add, Remove } from "@material-ui/icons";
-import { popularProducts } from "../data";
 import styled from "styled-components";
 import Announcements from "../components/Announcements";
 import Footer from "../components/Footer";
